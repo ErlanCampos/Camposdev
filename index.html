@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erlan Campos · Desenvolvedor Web & T.I Profissional</title>
-    
-    <!-- Favicon carregado direto no código (Burla o cache na hora) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%230d2d5e;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a3a6e;stop-opacity:1' /%3E%3C/linearGradient%3E%3Cfilter id='glow' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='5' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='240' fill='url(%23bgGrad)' /%3E%3Ccircle cx='256' cy='256' r='240' fill='none' stroke='%23F57C00' stroke-width='12' /%3E%3Cg filter='url(%23glow)' font-family='Barlow Condensed, Segoe UI, Arial, sans-serif' font-weight='900' text-anchor='middle'%3E%3Ctext y='325'%3E%3Ctspan x='100' fill='%23F57C00' font-size='220'%3E[%3C/tspan%3E%3Ctspan x='178' fill='%23FFFFFF' font-size='200'%3E%26lt;%3C/tspan%3E%3Ctspan x='256' fill='%23FFFFFF' font-size='200'%3E/%3C/tspan%3E%3Ctspan x='334' fill='%23F57C00' font-size='200'%3E%26gt;%3C/tspan%3E%3Ctspan x='412' fill='%23F57C00' font-size='220'%3E]%3C/tspan%3E%3C/text%3E%3C/g%3E%3Crect x='80' y='410' width='352' height='8' rx='4' fill='rgba(255,255,255,0.1)' /%3E%3Crect x='80' y='410' width='176' height='8' rx='4' fill='%23F57C00' /%3E%3C/svg%3E">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&family=Barlow+Condensed:wght@300;700;900&display=swap" rel="stylesheet">
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Erlan Campos · Desenvolvedor Web & T.I Profissional</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&family=Barlow+Condensed:wght@300;700;900&display=swap" rel="stylesheet">
+<style>
   :root {
     --navy: #0d2d5e;
     --navy-dark: #071a3a;
@@ -18,12 +14,19 @@
     --orange-light: #ffab40;
     --orange-glow: rgba(245,124,0,0.18);
     --white: #ffffff;
+    --white-80: rgba(255,255,255,0.8);
+    --white-70: rgba(255,255,255,0.7);
     --white-60: rgba(255,255,255,0.6);
+    --white-50: rgba(255,255,255,0.5);
     --white-30: rgba(255,255,255,0.3);
     --white-10: rgba(255,255,255,0.08);
     --white-5: rgba(255,255,255,0.04);
+    --white-3: rgba(255,255,255,0.03);
     --card-bg: rgba(7, 20, 50, 0.7);
     --border: rgba(255,255,255,0.09);
+    --green: #27AE60;
+    --green-glow: rgba(39,174,96,0.15);
+    --green-border: rgba(39,174,96,0.3);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -67,6 +70,17 @@
   }
   .section-title span { color: var(--orange); }
 
+  /* ===== SUBTÍTULO DE SERVIÇOS ===== */
+  .service-subtitle {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--orange);
+    grid-column: 1 / -1;
+    margin-bottom: -8px; margin-top: 8px;
+    padding-left: 4px;
+    opacity: 0.8;
+  }
+
   /* ===== NAV ===== */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -99,7 +113,7 @@
   }
   .nav-links a {
     font-size: 13px; font-weight: 600; letter-spacing: 0.08em;
-    text-transform: uppercase; color: var(--white-60);
+    text-transform: uppercase; color: var(--white-70);
     text-decoration: none; transition: color 0.2s;
   }
   .nav-links a:hover { color: var(--white); }
@@ -143,7 +157,6 @@
     width: 1px; background: linear-gradient(180deg, transparent, rgba(245,124,0,0.15), transparent);
   }
 
-  /* Grid overlay */
   .hero-grid {
     position: absolute; inset: 0;
     background-image:
@@ -194,11 +207,11 @@
 
   .hero-role {
     font-size: 13px; font-weight: 700; letter-spacing: 0.24em;
-    text-transform: uppercase; color: var(--white-30); margin-bottom: 28px;
+    text-transform: uppercase; color: var(--white-50); margin-bottom: 28px;
   }
 
   .hero-desc {
-    font-size: 18px; font-weight: 300; color: var(--white-60);
+    font-size: 18px; font-weight: 300; color: var(--white-80);
     line-height: 1.7; margin-bottom: 40px; max-width: 480px;
   }
   .hero-desc strong { color: var(--white); font-weight: 600; }
@@ -234,6 +247,23 @@
     transform: translateY(-2px);
   }
 
+  /* ===== RESPONSE TIME BADGE ===== */
+  .response-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-glow);
+    border: 1px solid var(--green-border);
+    border-radius: 20px; padding: 8px 16px;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--green); margin-top: 24px;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+  .response-badge-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 8px rgba(39,174,96,0.6);
+    animation: pulse 2s infinite;
+  }
+
   .hero-stats {
     display: flex; gap: 40px;
   }
@@ -242,9 +272,10 @@
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 36px; font-weight: 900; color: var(--white);
     letter-spacing: -0.5px; line-height: 1;
+    transition: color 0.3s;
   }
   .stat-num span { color: var(--orange); }
-  .stat-label { font-size: 11px; font-weight: 600; color: var(--white-30); letter-spacing: 0.1em; text-transform: uppercase; }
+  .stat-label { font-size: 11px; font-weight: 600; color: var(--white-50); letter-spacing: 0.1em; text-transform: uppercase; }
 
   .hero-right {
     position: relative; animation: fadeUp 0.8s 0.2s ease both;
@@ -281,7 +312,7 @@
     display: flex; align-items: center; gap: 8px;
     background: var(--white-5); border: 1px solid var(--border);
     border-radius: 6px; padding: 10px 14px;
-    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.8);
+    font-size: 13px; font-weight: 600; color: var(--white-80);
   }
   .svc-chip-dot {
     width: 6px; height: 6px; border-radius: 50%;
@@ -347,7 +378,76 @@
     font-size: 20px; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.04em; color: var(--white); margin-bottom: 10px;
   }
-  .sc-desc { font-size: 14px; color: var(--white-60); line-height: 1.6; }
+  .sc-desc { font-size: 14px; color: var(--white-70); line-height: 1.6; }
+
+  /* ===== DEPOIMENTOS ===== */
+  #depoimentos {
+    background: var(--navy);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .depoimentos-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    margin-top: 56px;
+  }
+
+  .depo-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 28px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .depo-card:hover {
+    border-color: rgba(245,124,0,0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  }
+
+  .depo-quote {
+    font-size: 14px; color: var(--white-80);
+    line-height: 1.7; margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    padding-left: 16px;
+  }
+  .depo-quote::before {
+    content: '"';
+    position: absolute; left: 0; top: -4px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px; font-weight: 900; color: var(--orange);
+    line-height: 1; opacity: 0.35;
+  }
+
+  .depo-author {
+    display: flex; align-items: center; gap: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  .depo-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px; font-weight: 900; color: var(--white);
+    flex-shrink: 0;
+  }
+  .depo-name {
+    font-size: 14px; font-weight: 700; color: var(--white);
+  }
+  .depo-role {
+    font-size: 11px; font-weight: 500; color: var(--white-50);
+    letter-spacing: 0.04em;
+  }
+  .depo-stars {
+    display: flex; gap: 3px; margin-bottom: 4px;
+  }
+  .depo-stars svg {
+    width: 14px; height: 14px;
+    fill: var(--orange);
+    stroke: none;
+  }
 
   /* ===== WHY ===== */
   #diferenciais {
@@ -376,7 +476,7 @@
     font-size: 20px; font-weight: 700; text-transform: uppercase;
     color: var(--white); letter-spacing: 0.04em; margin-bottom: 6px;
   }
-  .why-text-desc { font-size: 14px; color: var(--white-60); line-height: 1.6; }
+  .why-text-desc { font-size: 14px; color: var(--white-70); line-height: 1.6; }
 
   .why-visual {
     position: relative;
@@ -416,13 +516,13 @@
   }
   .wbc-check {
     width: 22px; height: 22px; border-radius: 50%;
-    background: rgba(39,174,96,0.15);
-    border: 1px solid rgba(39,174,96,0.3);
+    background: var(--green-glow);
+    border: 1px solid var(--green-border);
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
   .wbc-check svg { width: 12px; height: 12px; stroke: #27AE60; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-  .wbc-item-text { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); }
+  .wbc-item-text { font-size: 14px; font-weight: 600; color: var(--white-80); }
 
   /* ===== LOCATION ===== */
   #atendimento {
@@ -436,7 +536,7 @@
 
   .location-info { }
   .location-desc {
-    font-size: 17px; color: var(--white-60); line-height: 1.7;
+    font-size: 17px; color: var(--white-70); line-height: 1.7;
     margin-bottom: 32px;
   }
   .location-desc strong { color: var(--white); font-weight: 700; }
@@ -448,7 +548,7 @@
     display: flex; align-items: center; gap: 7px;
     background: var(--card-bg); border: 1px solid var(--border);
     border-radius: 20px; padding: 8px 16px;
-    font-size: 13px; font-weight: 600; color: var(--white-60);
+    font-size: 13px; font-weight: 600; color: var(--white-70);
   }
   .loc-chip-dot {
     width: 7px; height: 7px; border-radius: 50%;
@@ -496,7 +596,7 @@
     text-transform: uppercase; letter-spacing: 0.05em; position: relative; z-index: 2;
   }
   .map-state {
-    font-size: 13px; font-weight: 600; color: var(--white-30);
+    font-size: 13px; font-weight: 600; color: var(--white-50);
     letter-spacing: 0.12em; text-transform: uppercase; position: relative; z-index: 2;
   }
 
@@ -519,13 +619,28 @@
   .cta-title span { color: var(--orange); }
 
   .cta-desc {
-    font-size: 17px; color: var(--white-60); line-height: 1.7;
+    font-size: 17px; color: var(--white-80); line-height: 1.7;
     margin-bottom: 40px;
   }
 
   .cta-buttons {
     display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
+  }
+
+  .cta-response {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--green-glow);
+    border: 1px solid var(--green-border);
+    border-radius: 20px; padding: 10px 20px;
+    font-size: 12px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--green); margin-bottom: 40px;
+  }
+  .cta-response-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--green); box-shadow: 0 0 10px rgba(39,174,96,0.6);
+    animation: pulse 2s infinite;
   }
 
   .cta-contact-cards {
@@ -558,7 +673,7 @@
     display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;
   }
   .footer-copy {
-    font-size: 13px; color: var(--white-30);
+    font-size: 13px; color: var(--white-50);
   }
   .footer-copy span { color: var(--orange); }
 
@@ -578,6 +693,7 @@
   @media (max-width: 900px) {
     .hero-content { grid-template-columns: 1fr; gap: 48px; }
     .services-grid { grid-template-columns: 1fr 1fr; }
+    .depoimentos-grid { grid-template-columns: 1fr; }
     .why-grid, .location-grid { grid-template-columns: 1fr; gap: 48px; }
     .nav-links { display: none; }
   }
@@ -603,6 +719,7 @@
       </a>
       <ul class="nav-links">
         <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#depoimentos">Clientes</a></li>
         <li><a href="#diferenciais">Diferenciais</a></li>
         <li><a href="#atendimento">Atendimento</a></li>
         <li><a href="#contato" class="nav-cta">Fale Comigo</a></li>
@@ -642,20 +759,23 @@
         <div class="hero-actions">
           <a href="https://wa.me/5577999880394" target="_blank" class="btn-primary">
             <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-            Falar no WhatsApp
+            Solicitar Orçamento
           </a>
           <a href="#servicos" class="btn-secondary">Ver Serviços</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-num">100<span>%</span></div>
-            <div class="stat-label">Satisfação</div>
+            <div class="stat-num">40<span>+</span></div>
+            <div class="stat-label">Clientes Atendidos</div>
           </div>
-
           <div class="stat-item">
             <div class="stat-num">5<span>+</span></div>
-            <div class="stat-label">Anos Exp</div>
+            <div class="stat-label">Anos de Experiência</div>
           </div>
+        </div>
+        <div class="response-badge">
+          <div class="response-badge-dot"></div>
+          Resposta em menos de 1 hora
         </div>
       </div>
 
@@ -668,8 +788,8 @@
             <div class="svc-chip"><div class="svc-chip-dot"></div>SEO</div>
             <div class="svc-chip"><div class="svc-chip-dot"></div>Analytics</div>
             <div class="svc-chip"><div class="svc-chip-dot"></div>UI/UX Design</div>
+            <div class="svc-chip"><div class="svc-chip-dot"></div>Formatação</div>
             <div class="svc-chip"><div class="svc-chip-dot"></div>Sistemas Web (Saas)</div>
-            <div class="svc-chip"><div class="svc-chip-dot"></div>Limpeza + Formatação</div>
             <div class="svc-chip"><div class="svc-chip-dot"></div>Suporte T.I</div>
           </div>
           <div class="hcard-divider"></div>
@@ -708,6 +828,9 @@
     </div>
     <div class="services-grid">
 
+      <!-- SUBTÍTULO: CRIAÇÃO WEB -->
+      <div class="service-subtitle">// Criação Web</div>
+
       <div class="service-card reveal">
         <div class="sc-icon">
           <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -734,6 +857,17 @@
 
       <div class="service-card reveal">
         <div class="sc-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="sc-name">Criação de SaaS</div>
+        <div class="sc-desc">Desenvolvimento de sistemas web personalizados para seu negócio — automações, controles internos e soluções digitais sob medida.</div>
+      </div>
+
+      <!-- SUBTÍTULO: SUPORTE TÉCNICO -->
+      <div class="service-subtitle" style="margin-top: 16px;">// Suporte Técnico</div>
+
+      <div class="service-card reveal">
+        <div class="sc-icon">
           <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
         </div>
         <div class="sc-name">Formatação & Limpeza</div>
@@ -748,12 +882,71 @@
         <div class="sc-desc">Suporte remoto ou presencial, instalação de programas, otimização de desempenho e upgrade de peças (SSD, memória RAM e mais).</div>
       </div>
 
-      <div class="service-card reveal">
-        <div class="sc-icon">
-          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Quem confia no meu trabalho</div>
+      <h2 class="section-title">Depoimentos<br><span>de Clientes</span></h2>
+    </div>
+    <div class="depoimentos-grid">
+
+      <div class="depo-card reveal">
+        <div class="depo-quote"> Serviço impecável. Meu site ficou exatamente como eu queria, rápido e elegante. Já apareci na primeira página do Google em menos de 2 meses.</div>
+        <div class="depo-author">
+          <div class="depo-avatar">MR</div>
+          <div>
+            <div class="depo-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            </div>
+            <div class="depo-name">Marcos Ribeiro</div>
+            <div class="depo-role">Dentista · Vitória da Conquista</div>
+          </div>
         </div>
-        <div class="sc-name">Criação de SaaS</div>
-        <div class="sc-desc">Desenvolvimento de sistemas web personalizados para seu negócio — automações, controles internos e soluções digitais sob medida.</div>
+      </div>
+
+      <div class="depo-card reveal">
+        <div class="depo-quote"> Precisava de um sistema simples para controle de clientes e o Erlan entregou muito além do que imaginei. Atendimento sensacional, sempre disponível.</div>
+        <div class="depo-author">
+          <div class="depo-avatar">AS</div>
+          <div>
+            <div class="depo-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            </div>
+            <div class="depo-name">Ana Souza</div>
+            <div class="depo-role">Proprietária de Salão · Conquista</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card reveal">
+        <div class="depo-quote"> Meu computador voltou a ser rápido depois da limpeza e formatação. Ele fez backup de tudo, não perdi nada. Trabalho nota 10 e preço justo.</div>
+        <div class="depo-author">
+          <div class="depo-avatar">JP</div>
+          <div>
+            <div class="depo-stars">
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+              <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+            </div>
+            <div class="depo-name">João Pedro Alves</div>
+            <div class="depo-role">Estudante · Brumado</div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -874,8 +1067,7 @@
       <div class="section-tag" style="justify-content:center;">Vamos conversar</div>
       <h2 class="cta-title">Pronto para<br><span>Começar?</span></h2>
       <p class="cta-desc">
-        Entre em contato agora e receba um orçamento gratuito.<br>
-        Resposta rápida — geralmente em menos de 1 hora.
+        Entre em contato agora e receba um orçamento gratuito e sem compromisso.
       </p>
       <div class="cta-buttons">
         <a href="https://wa.me/5577999880394" target="_blank" class="btn-primary">
@@ -886,7 +1078,30 @@
           Enviar E-mail
         </a>
       </div>
-
+      <div class="cta-response">
+        <div class="cta-response-dot"></div>
+        Resposta rápida — geralmente em menos de 1 hora
+      </div>
+      <div class="cta-contact-cards">
+        <a href="https://wa.me/5577999880394" target="_blank" class="ccc-item">
+          <div class="ccc-icon green">
+            <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <div>
+            <div class="ccc-label">WhatsApp</div>
+            <div class="ccc-value">(77) 9 9988-0394</div>
+          </div>
+        </a>
+        <a href="mailto:erlancampos.dev@outlook.com" class="ccc-item">
+          <div class="ccc-icon blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="ccc-label">E-mail</div>
+            <div class="ccc-value">erlancampos.dev@outlook.com</div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
